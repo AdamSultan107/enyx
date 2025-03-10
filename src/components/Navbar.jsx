@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom'
-import Brand from '../enyxlogo.png';
+import Brand from "../assets/enyxlogo.png";
 import '../styles/navbar.css';
 import React from 'react';
 
@@ -8,7 +8,7 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="container">
         <div className="logo">
-            <img src={Brand} alt="Enyx Logo" className="logo-img"/>
+        <img src={Brand} alt="Enyx Logo" className="logo-img"/>
         </div>
         <div className="nav-elements">
           <ul>

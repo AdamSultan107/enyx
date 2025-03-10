@@ -1,6 +1,6 @@
 import React from "react";
 import { BsFacebook, BsTwitter, BsLinkedin } from "react-icons/bs";
-import enyxLogo from "../enyxwhitelogo.png";
+import enyxLogo from "../assets/enyxwhitelogo.png";
 import "../styles/footer.css";
 
 const Footer = () => {
