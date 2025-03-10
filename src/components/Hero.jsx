@@ -16,7 +16,7 @@ const Hero = () => {
         {/* CTA Buttons */}
         <div className="flex flex-col gap-y-2.5 lg:flex-row gap-x-5">
           <a 
-            href="#"
+            href="/aboutus"
             className="flex w-full lg:w-fit items-center justify-center rounded-lg bg-[#1053F3] px-6 py-2.5 font-semibold text-white transition duration-200 hover:shadow-lg hover:drop-shadow"
           >
             Learn More
