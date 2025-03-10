@@ -23,7 +23,7 @@ const NewsHome = () => {
         <div key={index} className="border-b border-gray-300 pb-4 mb-6">
           <h3 className="font-semibold text-lg">{news.date}</h3>
           <p className="mt-2 text-gray-700">{news.content}</p>
-          <button className="mt-3 px-4 py-2 bg-black text-white rounded-md hover:bg-gray-900 transition">
+          <button className="mt-3 px-4 py-2 bg-black text-white rounded-md hover:bg-gray-600 transition">
             Read More
           </button>
         </div>

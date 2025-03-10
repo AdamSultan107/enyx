@@ -11,32 +11,25 @@ const Footer = () => {
         <div className="footer-brand">
           <a href="/">
             <img src={enyxLogo} alt="Enyx Logo" className="footer-logo" />
+            <p className="flex text-left font-bold mx-5">106 W 32nd St, New York, NY 10001</p>
           </a>
         </div>
 
         {/* Footer Links */}
         <div className="footer-links">
           <div className="footer-section">
-            <h4>About</h4>
-            <ul>
-              <li><a href="#">Company</a></li>
-              <li><a href="#">Mission</a></li>
-            </ul>
+            <a href="/aboutus"><h4>About Us</h4></a>
+            <a href="/pipeline"><h4>Pipeline</h4></a>
           </div>
           <div className="footer-section">
-            <h4>Follow Us</h4>
-            <ul>
-              <li><a href="#">Github</a></li>
-              <li><a href="#">Discord</a></li>
-            </ul>
+            <a href="/publications"><h4>Publications</h4></a>
+            <a href="/contactus"><h4>Contact Us</h4></a>
           </div>
-          <div className="footer-section">
-            <h4>Legal</h4>
-            <ul>
-              <li><a href="#">Privacy Policy</a></li>
-              <li><a href="#">Terms & Conditions</a></li>
-            </ul>
-          </div>
+        </div>
+
+        <div className="footer-contact">
+          <p className="font-bold">admin@enyxtherapeutics.com</p>
+          <p className="font-bold">+1 (917) 819-1296</p>
         </div>
 
         {/* Social Media Icons */}
@@ -49,7 +42,7 @@ const Footer = () => {
 
       {/* Footer Bottom Section */}
       <div className="footer-bottom">
-        <p>© {new Date().getFullYear()} Enyx Therapeutics. All rights reserved.</p>
+        <p>© {new Date().getFullYear()} Enyx Therapeutics. All rights reserved. <u><a href="/privacy">Privacy Policy</a></u> | <u><a href="/terms">Terms and Conditions</a></u></p>
       </div>
     </footer>
   );

@@ -29,32 +29,21 @@
   /* Footer Links */
   .footer-links {
     display: flex;
-    flex: 2;
+    flex: 3;
     justify-content: space-evenly;
   }
   
   .footer-section h4 {
-    font-size: 16px;
+    font-size: 20px;
     margin-bottom: 10px;
   }
-  
-  .footer-section ul {
-    list-style: none;
-    padding: 0;
+
+  .footer-section h4 a {
+    transition: color 0.3s;
   }
-  
-  .footer-section ul li {
-    margin-bottom: 8px;
-  }
-  
-  .footer-section ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 14px;
-  }
-  
-  .footer-section ul li a:hover {
-    text-decoration: underline;
+
+  .footer-section h4 a:hover {
+    color: #38bdf8; /* Light Blue */
   }
   
   /* Social Media Icons */
@@ -65,8 +54,14 @@
   
   .footer-social a {
     color: white;
-    font-size: 20px;
+    font-size: 50px;
     transition: color 0.3s;
+  }
+
+  .footer-contact {
+    flex: 2;
+    justify-content: space-evenly;
+    padding-right: 20px;
   }
   
   .footer-social a:hover {
