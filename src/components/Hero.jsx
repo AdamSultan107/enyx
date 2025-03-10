@@ -1,5 +1,7 @@
+import * as React from "react"
+import { ChakraProvider } from "@chakra-ui/react";
 import { Box, Button, Container, Flex, Heading, Image, Stack, Text } from "@chakra-ui/react";
-import dnaImage from "../assets/heroimage.png"; // Ensure image is in the assets folder
+import dnaImage from "../assets/heroimage.png";
 
 const Hero = () => {
   return (

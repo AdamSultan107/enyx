@@ -5,9 +5,17 @@ import Navbar from './components/Navbar'
 import Foot from './components/Footer'
 import Hero from './components/Hero'
 
-function App() {
+const App = () => {
+  const theme = {
+    // ... your system-ui theme
+    config: {
+      useSystemColorMode: false, // or true
+      initialColorMode: "light", // or "dark"
+      cssVarPrefix: "chakra", // any string
+    }
+  }
   return (
-    <ChakraProvider>
+    <ChakraProvider theme = {theme}>
       <BrowserRouter>
         <Navbar />
         <Hero />
