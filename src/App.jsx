@@ -4,6 +4,8 @@ import { ChakraProvider } from "@chakra-ui/react"
 import Navbar from './components/Navbar'
 import Foot from './components/Footer'
 import Hero from './components/Hero'
+import AboutUsHome from './components/AboutUsHome'
+import NewsHome from './components/NewsHome'
 
 const App = () => {
   const theme = {
@@ -19,6 +21,8 @@ const App = () => {
       <BrowserRouter>
         <Navbar />
         <Hero />
+        <AboutUsHome />
+        <NewsHome />
         <Foot />
       </BrowserRouter>
     </ChakraProvider>
