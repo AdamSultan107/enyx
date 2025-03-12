@@ -5,6 +5,30 @@ import Foot from '../components/Footer';
 import Gene from '../assets/cartoongene.png';
 import Science from '../assets/science.png';
 
+const teamMembers = [
+    {
+      name: "John Doe",
+      position: "Chief Executive Officer",
+      img: "https://bootdey.com/img/Content/avatar/avatar1.png",
+    },
+    {
+      name: "Elizabeth Doe",
+      position: "Marketing Specialist",
+      img: "https://bootdey.com/img/Content/avatar/avatar6.png",
+    },
+    {
+      name: "Doug Doe",
+      position: "Head of Support",
+      img: "https://bootdey.com/img/Content/avatar/avatar3.png",
+    },
+    {
+      name: "Fabricio Doe",
+      position: "Chief Technical Officer",
+      img: "https://bootdey.com/img/Content/avatar/avatar4.png",
+    }
+  ];
+
+
 const AboutUs = () => {
     return (
     <div className ="max-w-5xl mx-auto px-6 py-16">
@@ -49,8 +73,22 @@ const AboutUs = () => {
                 </p>
             </div>
         </section>
-    </div>
 
+        <section className="text-center my-16">
+          <h2 className="text-4xl font-bold mb-8 underline decoration-blue-500">
+            Meet Our Team
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
+            {teamMembers.map((member, index) => (
+              <div key={index} className="bg-white shadow-lg rounded-lg p-6 text-center">
+                <img src={member.img} alt={member.name} className="rounded-full mx-auto w-32 h-32 mb-4" />
+                <h3 className="text-2xl font-semibold">{member.name}</h3>
+                <h4 className="text-gray-500 text-lg">{member.position}</h4>
+              </div>
+            ))}
+          </div>
+        </section>
+    </div>
     );
   }
   
