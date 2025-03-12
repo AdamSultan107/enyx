@@ -8,12 +8,14 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="container">
         <div className="logo">
-        <img src={Brand} alt="Enyx Logo" className="logo-img"/>
+            <NavLink to="/">
+                <img src={Brand} alt="Enyx Logo" className="logo-img"/>
+            </NavLink>
         </div>
         <div className="nav-elements">
           <ul>
             <li>
-              <NavLink to="../pages/aboutus">About Us</NavLink>
+              <NavLink to="/aboutus">About Us</NavLink>
             </li>
             <li>
               <NavLink to="/pipeline">Pipeline</NavLink>
