@@ -4,6 +4,15 @@ import Navbar from '../components/Navbar';
 import Foot from '../components/Footer';
 import Gene from '../assets/cartoongene.png';
 import Science from '../assets/science.png';
+import {
+    MDBCarousel,
+    MDBCarouselInner,
+    MDBCarouselItem,
+    MDBContainer,
+    MDBRow,
+    MDBCol,
+    MDBIcon,
+  } from "mdb-react-ui-kit";
 
 const teamMembers = [
     {
@@ -28,6 +37,26 @@ const teamMembers = [
     }
   ];
 
+  const testimonials = [
+    {
+      name: "Maria Kate",
+      role: "Photographer",
+      img: "https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(10).webp",
+      text: "Enyx Therapeutics has truly changed my life. Their research and dedication to gene therapy innovation are unparalleled.",
+    },
+    {
+      name: "John Doe",
+      role: "Web Developer",
+      img: "https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(32).webp",
+      text: "The groundbreaking advancements by Enyx have given hope to many families around the world.",
+    },
+    {
+      name: "Anna Deynah",
+      role: "Web Developer",
+      img: "https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(1).webp",
+      text: "Thanks to Enyx Therapeutics, I have a second chance at life. Their commitment to patient care is extraordinary.",
+    }
+  ];
 
 const AboutUs = () => {
     return (
@@ -87,6 +116,35 @@ const AboutUs = () => {
               </div>
             ))}
           </div>
+        </section>
+
+        <section className="my-16">
+          <h2 className="text-5xl font-bold text-center mb-8 underline decoration-blue-500">
+            What People Say About Us
+          </h2>
+          <MDBCarousel showControls dark>
+            <MDBCarouselItem className="active text-center">
+        <img
+          src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(10).webp"
+          alt="avatar"
+          className="rounded-circle shadow-1-strong mb-4"
+          style={{ width: "150px" }}
+        />
+        <h5>Maria Kate</h5>
+        <p>Photographer</p>
+      </MDBCarouselItem>
+
+      <MDBCarouselItem className="text-center">
+        <img
+          src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(32).webp"
+          alt="avatar"
+          className="rounded-circle shadow-1-strong mb-4"
+          style={{ width: "150px" }}
+        />
+        <h5>John Doe</h5>
+        <p>Web Developer</p>
+      </MDBCarouselItem>
+    </MDBCarousel>
         </section>
     </div>
     );
