@@ -1,14 +1,11 @@
 import React from 'react';
-// import { BrowserRouter } from 'react-router-dom'
-import Navbar from '../components/Navbar';
-import Foot from '../components/Footer';
 import Gene from '../assets/cartoongene.png';
 import Science from '../assets/science.png';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
-import { pre } from 'framer-motion/client';
+// import { pre } from 'framer-motion/client';
 
 const teamMembers = [
     {

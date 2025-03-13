@@ -6,9 +6,12 @@ import Foot from "./components/Footer";
 import Hero from "./components/Hero";
 import AboutUsHome from "./components/AboutUsHome";
 import NewsHome from "./components/NewsHome";
-import AboutUs from "./pages/AboutUs"; // This is your About Us page
+import AboutUs from "./pages/AboutUs";
+import ContactUs from "./pages/ContactUs";
+import Publications from "./pages/Publications";
 
-// ✅ Fix Chakra Theme Configuration
+
+
 const theme = extendTheme({
   config: {
     initialColorMode: "light", // Default light mode
@@ -33,6 +36,8 @@ const App = () => {
             }
           />
           <Route path="/aboutus" element={<AboutUs />} />
+          <Route path="/contactus" element={<ContactUs />} />
+          <Route path="/publications" element={<Publications />} />
         </Routes>
         <Foot />
       </Router>
