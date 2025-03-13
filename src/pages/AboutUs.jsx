@@ -1,18 +1,14 @@
 import React from 'react';
-import { BrowserRouter } from 'react-router-dom'
+// import { BrowserRouter } from 'react-router-dom'
 import Navbar from '../components/Navbar';
 import Foot from '../components/Footer';
 import Gene from '../assets/cartoongene.png';
 import Science from '../assets/science.png';
-import {
-    MDBCarousel,
-    MDBCarouselInner,
-    MDBCarouselItem,
-    MDBContainer,
-    MDBRow,
-    MDBCol,
-    MDBIcon,
-  } from "mdb-react-ui-kit";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import { pre } from 'framer-motion/client';
 
 const teamMembers = [
     {
@@ -58,6 +54,40 @@ const teamMembers = [
     }
   ];
 
+  const NextArrow = ({ onClick }) => {
+    return (
+      <div 
+        className="absolute top-1/2 right-[-40px] transform -translate-y-1/2 text-gray-500 hover:text-gray-800 cursor-pointer z-10"
+        onClick={onClick}
+      >
+        <FaChevronRight size={30} />
+      </div>
+    );
+  };
+  
+  const PrevArrow = ({ onClick }) => {
+    return (
+      <div 
+        className="absolute top-1/2 left-[-40px] transform -translate-y-1/2 text-gray-500 hover:text-gray-800 cursor-pointer z-10"
+        onClick={onClick}
+      >
+        <FaChevronLeft size={30} />
+      </div>
+    );
+  };
+
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />,
+  };
+
 const AboutUs = () => {
     return (
     <div className ="max-w-5xl mx-auto px-6 py-16">
@@ -71,6 +101,7 @@ const AboutUs = () => {
             </p>
         </section>
 
+        {/* Our Mission & Vision */}
         <section className="flex flex-col lg:flex-row items-center gap-x-10 mb-12">
             <div className="w-40 h-40 lg:ml-[-100px]">  
                 <img src={Gene} alt="Gene" className="object-contain" />
@@ -87,6 +118,7 @@ const AboutUs = () => {
             </div>
         </section>
 
+        {/* Our Science */}
         <section className="flex flex-col lg:flex-row items-center gap-x-10 mb-12">
         <div className="w-40 h-40 lg:ml-[-100px]">  
                 <img src={Science} alt="Science & Technology" className="object-contain" />
@@ -103,6 +135,7 @@ const AboutUs = () => {
             </div>
         </section>
 
+        {/* Meet Our Team */}
         <section className="text-center my-16">
           <h2 className="text-4xl font-bold mb-8 underline decoration-blue-500">
             Meet Our Team
@@ -117,34 +150,28 @@ const AboutUs = () => {
             ))}
           </div>
         </section>
-
+        
+        {/* Testimonials */}
         <section className="my-16">
-          <h2 className="text-5xl font-bold text-center mb-8 underline decoration-blue-500">
-            What People Say About Us
+          <h2 className="text-4xl font-bold text-center mb-6 underline decoration-blue-500">
+            Our Patients' Stories
           </h2>
-          <MDBCarousel showControls dark>
-            <MDBCarouselItem className="active text-center">
-        <img
-          src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(10).webp"
-          alt="avatar"
-          className="rounded-circle shadow-1-strong mb-4"
-          style={{ width: "150px" }}
-        />
-        <h5>Maria Kate</h5>
-        <p>Photographer</p>
-      </MDBCarouselItem>
-
-      <MDBCarouselItem className="text-center">
-        <img
-          src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(32).webp"
-          alt="avatar"
-          className="rounded-circle shadow-1-strong mb-4"
-          style={{ width: "150px" }}
-        />
-        <h5>John Doe</h5>
-        <p>Web Developer</p>
-      </MDBCarouselItem>
-    </MDBCarousel>
+          <div className="max-w-4xl mx-auto">
+            <Slider {...settings}>
+              {testimonials.map((testimonial, index) => (
+                <div key={index} className="p-6 text-center">
+                  <img
+                    src={testimonial.img}
+                    alt={testimonial.name}
+                    className="mx-auto w-30 h-30 mb-4 rounded-full"
+                  />
+                  <p className="text-lg italic">"{testimonial.text}"</p>
+                  <h3 className="mt-4 text-xl font-semibold">{testimonial.name}</h3>
+                  <p className="text-sm text-gray-500">{testimonial.role}</p>
+                </div>
+              ))}
+            </Slider>
+          </div>
         </section>
     </div>
     );
