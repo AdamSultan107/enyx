@@ -1,3 +1,28 @@
+# Enyx Therapeutics (In Progress)
+
+ENYX Therapeutics, LLC, is an early stage biotechnology company focused on using gene therapy tech
+nologies to treat hereditary disorders of unmet medical needs. ENYX was founded in January 2022 by R.
+Crystal, Chairman, Department of Genetic Medicine at Weill Cornell, one of the pioneers of in vivo gene
+therapy. ENYX has recruited Dr. Robert Pergolizzi to the position of Scientific Administrator. Dr. Pergolizzi
+has extensive experience in molecular biology and gene therapy. He previously supervised core laborato-
+ries and instrument facilities at North Shore-Long Island Jewish Health System (Manhasset, NY), Weill
+Cornell Medical College, and currently at the Surgical Sciences Research Laboratory and Vascular Clini-
+cal and Research Fellowship program at Englewood Hospital and Medical Center (Englewood, NJ). He is
+currently a consultant in Gene Therapy and GMP Vector Production to Enzo Biochem, Inc. (NY, NY), Ae-
+gle Biomedical (Princeton, NJ), and Anemoi Biosciences (Indianapolis, IN) and previously filled the same
+role for Angion Biomedica (Uniondale, NY). ENYX has also engaged Dr. Yael Strulovici-Barel as Director
+of Research. Dr. Strulovici-Barel is a Co-Investigator on this project. ENYX maintains all required registra-
+tions to qualify as a small business concern (SBC) eligible for SBIR and STTR applications. ENYX has a
+DUNS number 118569572 / UEI PP93C8GM4JM5). an EIN tax ID (88-0813041), and is registered with
+the System for Award Management (SAM), grants.gov, eRA Commons, and the U.S. Small Business As-
+sociation (SBA) Company Registry SBC_002193869). ENYX has legal representation (C. Weissman,
+P.C), Citibank for banking-related tasks, and Citrin Cooperman for accounting. ENYX has office and con-
+ference space at 106 East 32nd Street, 2nd Floor, New York, NY, 10001, conveniently located one block
+from New York Penn Station near Herald Square in Manhattan. Meetings between ENYX and Weill Cor-
+nell personnel will be facilitated by the fact that both are located near Metropolitan Transit Authority Q train
+subway stations enabling door-to-door traffic-free transportation between ENYX and Weill Cornell in less
+than 30 minutes.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
