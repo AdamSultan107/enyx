@@ -10,12 +10,11 @@ import AboutUs from "./pages/AboutUs";
 import ContactUs from "./pages/ContactUs";
 import Publications from "./pages/Publications";
 
-
-
+// Chakra theme config
 const theme = extendTheme({
   config: {
-    initialColorMode: "light", // Default light mode
-    useSystemColorMode: false, // User's system preference will not override
+    initialColorMode: "light",
+    useSystemColorMode: false,
   },
 });
 
@@ -24,21 +23,24 @@ const App = () => {
     <ChakraProvider theme={theme}>
       <Router>
         <Navbar />
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <>
-                <Hero />
-                <AboutUsHome />
-                <NewsHome />
-              </>
-            }
-          />
-          <Route path="/aboutus" element={<AboutUs />} />
-          <Route path="/contactus" element={<ContactUs />} />
-          <Route path="/publications" element={<Publications />} />
-        </Routes>
+        {/* Main content wrapper */}
+        <main className="pt-48 md:pt-52 lg:pt-56 relative">
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <>
+                  <Hero />
+                  <AboutUsHome />
+                  <NewsHome />
+                </>
+              }
+            />
+            <Route path="/aboutus" element={<AboutUs />} />
+            <Route path="/contactus" element={<ContactUs />} />
+            <Route path="/publications" element={<Publications />} />
+          </Routes>
+        </main>
         <Foot />
       </Router>
     </ChakraProvider>

@@ -1,177 +1,182 @@
-import React from 'react';
-import Gene from '../assets/cartoongene.png';
-import Science from '../assets/science.png';
+import React from "react";
+import { motion } from "framer-motion";
+import { FaDna, FaMicroscope } from "react-icons/fa";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
-// import { pre } from 'framer-motion/client';
 
 const teamMembers = [
-    {
-      name: "John Doe",
-      position: "Chief Executive Officer",
-      img: "https://bootdey.com/img/Content/avatar/avatar1.png",
-    },
-    {
-      name: "Elizabeth Doe",
-      position: "Marketing Specialist",
-      img: "https://bootdey.com/img/Content/avatar/avatar6.png",
-    },
-    {
-      name: "Doug Doe",
-      position: "Head of Support",
-      img: "https://bootdey.com/img/Content/avatar/avatar3.png",
-    },
-    {
-      name: "Fabricio Doe",
-      position: "Chief Technical Officer",
-      img: "https://bootdey.com/img/Content/avatar/avatar4.png",
-    }
-  ];
+  {
+    name: "John Doe",
+    position: "Chief Executive Officer",
+    img: "https://bootdey.com/img/Content/avatar/avatar1.png",
+  },
+  {
+    name: "Elizabeth Doe",
+    position: "Marketing Specialist",
+    img: "https://bootdey.com/img/Content/avatar/avatar6.png",
+  },
+  {
+    name: "Doug Doe",
+    position: "Chief Scientific Officer",
+    img: "https://bootdey.com/img/Content/avatar/avatar7.png",
+  },
+];
 
-  const testimonials = [
-    {
-      name: "Maria Kate",
-      role: "Photographer",
-      img: "https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(10).webp",
-      text: "Enyx Therapeutics has truly changed my life. Their research and dedication to gene therapy innovation are unparalleled.",
-    },
-    {
-      name: "John Doe",
-      role: "Web Developer",
-      img: "https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(32).webp",
-      text: "The groundbreaking advancements by Enyx have given hope to many families around the world.",
-    },
-    {
-      name: "Anna Deynah",
-      role: "Web Developer",
-      img: "https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(1).webp",
-      text: "Thanks to Enyx Therapeutics, I have a second chance at life. Their commitment to patient care is extraordinary.",
-    }
-  ];
-
-  const NextArrow = ({ onClick }) => {
-    return (
-      <div 
-        className="absolute top-1/2 right-[-40px] transform -translate-y-1/2 text-gray-500 hover:text-gray-800 cursor-pointer z-10"
-        onClick={onClick}
-      >
-        <FaChevronRight size={30} />
-      </div>
-    );
-  };
-  
-  const PrevArrow = ({ onClick }) => {
-    return (
-      <div 
-        className="absolute top-1/2 left-[-40px] transform -translate-y-1/2 text-gray-500 hover:text-gray-800 cursor-pointer z-10"
-        onClick={onClick}
-      >
-        <FaChevronLeft size={30} />
-      </div>
-    );
+const AboutUs = () => {
+  const fadeInUp = {
+    hidden: { opacity: 0, y: 30 },
+    visible: { opacity: 1, y: 0 },
   };
 
-  const settings = {
+  const sliderSettings = {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 1,
+    slidesToShow: 2,
     slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 3000,
-    nextArrow: <NextArrow />,
-    prevArrow: <PrevArrow />,
+    arrows: true,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
   };
 
-const AboutUs = () => {
-    return (
-    <div className ="max-w-5xl mx-auto px-6 py-16">
-        <section className="text-center mb-12">
-            <h1 className="text-4xl font-bold mb-4 underline decoration-blue-500">
-                About Us
-            </h1>
-            <p className="text-2xl text-gray-700">
-                At Enyx, we are dedicated to advancing gene therapy, turning cutting-edge
-                research into transformative treatments for rare and life-threatening diseases.
-            </p>
-        </section>
+  return (
+    <div className="px-6 py-16 bg-white flex flex-col items-center">
+      <motion.h1
+        variants={fadeInUp}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
+        className="text-5xl font-bold mb-6 text-center"
+      >
+        About Us
+      </motion.h1>
 
-        {/* Our Mission & Vision */}
-        <section className="flex flex-col lg:flex-row items-center gap-x-10 mb-12">
-            <div className="w-40 h-40 lg:ml-[-100px]">  
-                <img src={Gene} alt="Gene" className="object-contain" />
-            </div>
-            <div className="w-full">
-                <h2 className="text-4xl font-bold mb-4 underline decoration-blue-500">
-                    Our Mission & Vision
-                    </h2>
-                <p className="text-2xl w-full text-left leading-relaxed text-gray-700">
-                    Our mission is to develop and deliver innovative gene therapies that 
-                    address unmet medical needs, providing hope and healing to patients 
-                    and their families.
-                </p>
-            </div>
-        </section>
+      <motion.p
+        variants={fadeInUp}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        transition={{ delay: 0.2, duration: 0.8 }}
+        className="text-xl text-gray-600 text-center max-w-3xl mb-16"
+      >
+        At Enyx, we are dedicated to advancing gene therapy, turning cutting-edge research into transformative treatments for rare and life-threatening diseases.
+      </motion.p>
 
-        {/* Our Science */}
-        <section className="flex flex-col lg:flex-row items-center gap-x-10 mb-12">
-        <div className="w-40 h-40 lg:ml-[-100px]">  
-                <img src={Science} alt="Science & Technology" className="object-contain" />
-            </div>
-            <div className="w-full">
-                <h2 className="text-4xl font-bold mb-4 underline decoration-blue-500">
-                    Our Science
-                    </h2>
-                <p className="text-2xl w-full text-left leading-relaxed text-gray-700">
-                At Enyx Therapeutics, we develop gene therapies for rare diseases, using viral vectors, CRISPR, 
-                and cell-based treatments to correct genetic mutations. Our work spans neuromuscular, hematologic, 
-                metabolic, and vision disorders, advancing from research to clinical trials to transform lives.
-                </p>
-            </div>
-        </section>
+      {/* Mission & Vision */}
+      <motion.div
+        variants={fadeInUp}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        transition={{ delay: 0.4, duration: 0.8 }}
+        className="flex flex-col md:flex-row items-center mb-12 max-w-5xl"
+      >
+        <FaDna className="text-5xl text-blue-600 mb-4 md:mb-0 md:mr-6" />
+        <div>
+          <h2 className="text-2xl font-semibold text-blue-600 mb-2">Our Mission & Vision</h2>
+          <p className="text-lg text-gray-600">
+            Our mission is to develop and deliver innovative gene therapies that address unmet medical needs, providing hope and healing to patients and their families.
+          </p>
+        </div>
+      </motion.div>
 
-        {/* Meet Our Team */}
-        <section className="text-center my-16">
-          <h2 className="text-4xl font-bold mb-8 underline decoration-blue-500">
-            Meet Our Team
-          </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
-            {teamMembers.map((member, index) => (
-              <div key={index} className="bg-white shadow-lg rounded-lg p-6 text-center">
-                <img src={member.img} alt={member.name} className="rounded-full mx-auto w-32 h-32 mb-4" />
-                <h3 className="text-2xl font-semibold">{member.name}</h3>
-                <h4 className="text-gray-500 text-lg">{member.position}</h4>
-              </div>
-            ))}
-          </div>
-        </section>
-        
-        {/* Testimonials */}
-        <section className="my-16">
-          <h2 className="text-4xl font-bold text-center mb-6 underline decoration-blue-500">
-            Our Patients' Stories
-          </h2>
-          <div className="max-w-4xl mx-auto">
-            <Slider {...settings}>
-              {testimonials.map((testimonial, index) => (
-                <div key={index} className="p-6 text-center">
-                  <img
-                    src={testimonial.img}
-                    alt={testimonial.name}
-                    className="mx-auto w-30 h-30 mb-4 rounded-full"
-                  />
-                  <p className="text-lg italic">"{testimonial.text}"</p>
-                  <h3 className="mt-4 text-xl font-semibold">{testimonial.name}</h3>
-                  <p className="text-sm text-gray-500">{testimonial.role}</p>
-                </div>
-              ))}
-            </Slider>
-          </div>
-        </section>
+      {/* Science */}
+      <motion.div
+        variants={fadeInUp}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        transition={{ delay: 0.6, duration: 0.8 }}
+        className="flex flex-col md:flex-row items-center mb-16 max-w-5xl"
+      >
+        <FaMicroscope className="text-5xl text-blue-600 mb-4 md:mb-0 md:mr-6" />
+        <div>
+          <h2 className="text-2xl font-semibold text-blue-600 mb-2">Our Science</h2>
+          <p className="text-lg text-gray-600">
+            At Enyx Therapeutics, we develop gene therapies for rare diseases, using viral vectors, CRISPR, and cell-based treatments to correct genetic mutations. Our work spans neuromuscular, hematologic, metabolic, and vision disorders, advancing from research to clinical trials to transform lives.
+          </p>
+        </div>
+      </motion.div>
+
+      {/* Pipeline */}
+      <motion.h2
+        variants={fadeInUp}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        transition={{ delay: 0.8, duration: 0.8 }}
+        className="text-2xl font-semibold text-center mb-6 text-blue-600"
+      >
+        Our Pipeline
+      </motion.h2>
+
+      <motion.div
+        variants={fadeInUp}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        transition={{ delay: 1, duration: 0.8 }}
+        className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mb-16"
+      >
+        <div className="bg-gray-50 p-6 rounded-xl shadow">
+          <h3 className="text-lg font-semibold mb-2">Neuromuscular</h3>
+          <p className="text-gray-600">Developing therapies targeting severe neuromuscular disorders.</p>
+        </div>
+        <div className="bg-gray-50 p-6 rounded-xl shadow">
+          <h3 className="text-lg font-semibold mb-2">Hematologic</h3>
+          <p className="text-gray-600">Advancing gene therapies for blood-related genetic conditions.</p>
+        </div>
+        <div className="bg-gray-50 p-6 rounded-xl shadow">
+          <h3 className="text-lg font-semibold mb-2">Vision Disorders</h3>
+          <p className="text-gray-600">Restoring sight and improving vision outcomes through gene editing.</p>
+        </div>
+      </motion.div>
+
+      {/* Team */}
+      <motion.h2
+        variants={fadeInUp}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        transition={{ delay: 1.2, duration: 0.8 }}
+        className="text-2xl font-semibold text-center mb-10 text-blue-600"
+      >
+        Meet Our Team
+      </motion.h2>
+
+      <motion.div
+        variants={fadeInUp}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        transition={{ delay: 1.4, duration: 0.8 }}
+        className="w-full max-w-6xl"
+      >
+        <Slider {...sliderSettings}>
+          {teamMembers.map((member, idx) => (
+            <div key={idx} className="px-4">
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                className="bg-white p-6 rounded-2xl shadow-lg flex flex-col items-center text-center"
+              >
+                <img src={member.img} alt={member.name} className="w-32 h-32 rounded-full mb-4 object-cover" />
+                <h3 className="text-lg font-semibold mb-1">{member.name}</h3>
+                <p className="text-gray-600">{member.position}</p>
+              </motion.div>
+            </div>
+          ))}
+        </Slider>
+      </motion.div>
     </div>
-    );
-  }
-  
-  export default AboutUs;
+  );
+};
+
+export default AboutUs;
