@@ -16,8 +16,8 @@ import logo from "../assets/enyxlogo.png";
 const Links = [
   { name: "Home", path: "/" },
   { name: "About Us", path: "/aboutus" },
-  { name: "Contact", path: "/contactus" },
   { name: "Publications", path: "/publications" },
+  { name: "Contact", path: "/contactus" },
 ];
 
 const NavLink = ({ to, children }) => (
@@ -40,13 +40,15 @@ export default function Navbar() {
     <Box bg="white" px={6} py={4} boxShadow="md" position="fixed" w="full" zIndex={100}>
       <Flex h={16} alignItems="center" justifyContent="space-between">
         {/* Logo */}
+        <Link to="/">
         <Box flexShrink={0}>
           <img
-            src={logo} // Update this path to your logo file
+            src={logo} 
             alt="Logo"
             style={{ height: "100px" }}
           />
         </Box>
+        </Link>
 
         {/* Desktop Links */}
         <HStack
