@@ -137,7 +137,7 @@ const AboutUs = () => {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
-        transition={{ delay: 1.2, duration: 0.8 }}
+        transition={{ delay: 1.1, duration: 0.8 }}
         className="text-5xl font-semibold text-center mb-20 text-blue-600"
       >
         Meet Our Team
@@ -148,7 +148,7 @@ const AboutUs = () => {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
-        transition={{ delay: 1.4, duration: 0.8 }}
+        transition={{ delay: 1.0, duration: 0.8 }}
         className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 max-w-6xl"
       >
         {teamMembers.map((member, idx) => (
