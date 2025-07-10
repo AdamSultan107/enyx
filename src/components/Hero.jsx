@@ -5,7 +5,6 @@ import { motion } from "framer-motion";
 const Hero = () => {
   return (
     <div className="w-full flex flex-col gap-y-10 lg:flex-row items-center gap-x-10 justify-center py-14 px-6 lg:px-20">
-      {/* Left Content Section */}
       <motion.div 
         initial={{ opacity: 0, x: -50 }}
         animate={{ opacity: 1, x: 0 }}
@@ -29,7 +28,6 @@ const Hero = () => {
         </div>
       </motion.div>
 
-      {/* Hero Image Section */}
       <motion.div
         initial={{ opacity: 0, x: 50 }}
         animate={{ opacity: 1, x: 0 }}

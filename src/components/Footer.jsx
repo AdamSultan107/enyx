@@ -7,7 +7,6 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-container">
-        {/* Brand Section */}
         <div className="footer-brand">
           <a href="/">
             <img src={enyxLogo} alt="Enyx Logo" className="footer-logo" />
@@ -15,7 +14,6 @@ const Footer = () => {
           </a>
         </div>
 
-        {/* Footer Links */}
         <div className="footer-links">
           <div className="footer-section">
             <a href="/aboutus"><h4>About Us</h4></a>
@@ -32,7 +30,6 @@ const Footer = () => {
           <p className="font-bold">+1 (917) 819-1296</p>
         </div>
 
-        {/* Social Media Icons */}
         <div className="footer-social">
           <a href="#"><BsFacebook /></a>
           <a href="#"><BsLinkedin /></a>
@@ -40,7 +37,6 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Footer Bottom Section */}
       <div className="footer-bottom">
         <p>© {new Date().getFullYear()} Enyx Therapeutics. All rights reserved. <u><a href="/privacy">Privacy Policy</a></u> | <u><a href="/terms">Terms and Conditions</a></u></p>
       </div>

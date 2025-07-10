@@ -19,7 +19,6 @@ const newsData = [
 const NewsHome = () => {
   return (
     <section className="relative px-6 py-24 max-w-7xl mx-auto">
-      {/* Subtle background shape */}
       <motion.div
         initial={{ opacity: 0, scale: 0.8 }}
         whileInView={{ opacity: 0.05, scale: 1 }}

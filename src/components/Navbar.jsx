@@ -39,7 +39,6 @@ export default function Navbar() {
   return (
     <Box bg="white" px={6} py={4} boxShadow="md" position="fixed" w="full" zIndex={100}>
       <Flex h={16} alignItems="center" justifyContent="space-between">
-        {/* Logo */}
         <Link to="/">
         <Box flexShrink={0}>
           <img
@@ -50,7 +49,6 @@ export default function Navbar() {
         </Box>
         </Link>
 
-        {/* Desktop Links */}
         <HStack
           as="nav"
           spacing={4}
@@ -63,7 +61,6 @@ export default function Navbar() {
           ))}
         </HStack>
 
-        {/* Hamburger Icon */}
         <IconButton
           size="lg"
           icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
@@ -73,7 +70,6 @@ export default function Navbar() {
         />
       </Flex>
 
-      {/* Mobile Menu */}
       {isOpen ? (
         <Box pb={4} display={{ md: "none" }}>
           <Stack as="nav" spacing={4}>
