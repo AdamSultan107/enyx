@@ -1,6 +1,6 @@
 # Enyx Therapeutics (In Progress)
 
-ENYX Therapeutics, LLC, is an early stage biotechnology company focused on using gene therapy tech
+ENYX Therapeutics, LLC., is an early stage biotechnology company focused on using gene therapy tech
 nologies to treat hereditary disorders of unmet medical needs. ENYX was founded in January 2022 by R.
 Crystal, Chairman, Department of Genetic Medicine at Weill Cornell, one of the pioneers of in vivo gene
 therapy. ENYX has recruited Dr. Robert Pergolizzi to the position of Scientific Administrator. Dr. Pergolizzi
