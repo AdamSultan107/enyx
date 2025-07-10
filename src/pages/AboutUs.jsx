@@ -58,7 +58,7 @@ const AboutUs = () => {
         transition={{ delay: 0.2, duration: 0.8 }}
         className="text-2xl text-gray-600 text-center max-w-4xl mb-20"
       >
-        At Enyx, we are dedicated to advancing gene therapy, turning cutting-edge research into transformative treatments for rare and life-threatening diseases.
+        At ENYX, we are dedicated to advancing gene therapy, turning cutting-edge research into transformative treatments for rare and life-threatening diseases.
       </motion.p>
 
       {/* Mission & Vision */}
@@ -92,7 +92,7 @@ const AboutUs = () => {
         <div>
           <h2 className="text-4xl font-semibold text-blue-600 mb-3">Our Science</h2>
           <p className="text-xl text-gray-600">
-            At Enyx Therapeutics, we develop gene therapies for rare diseases, using viral vectors, CRISPR, and cell-based treatments to correct genetic mutations. Our work spans neuromuscular, hematologic, metabolic, and vision disorders, advancing from research to clinical trials to transform lives.
+            At ENYX Therapeutics, we develop gene therapies for rare diseases, using viral vectors, CRISPR, and cell-based treatments to correct genetic mutations. Our work spans neuromuscular, hematologic, metabolic, and vision disorders, advancing from research to clinical trials to transform lives.
           </p>
         </div>
       </motion.div>

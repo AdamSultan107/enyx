@@ -58,7 +58,7 @@ const Publications = () => {
           className="h-1 bg-blue-600 rounded-full mx-auto mb-10"
         ></motion.div>
         <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-          At Enyx Therapeutics, we are committed to advancing the field through transparency and collaboration. Explore our latest research and breakthroughs below.
+          At ENYX Therapeutics, we are committed to advancing the field through transparency and collaboration. Explore our latest research and breakthroughs below.
         </p>
       </motion.section>
 

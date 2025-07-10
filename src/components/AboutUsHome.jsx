@@ -21,7 +21,7 @@ const AboutUsHome = () => {
       <div className="relative max-w-6xl mx-auto text-center">
         <h2 className="text-5xl font-bold mb-4">About Us</h2>
         <p className="mt-4 text-lg md:text-xl text-gray-700 max-w-4xl mx-auto">
-          At Enyx, we are committed to pioneering advancements in gene therapy,
+          At ENYX, we are committed to pioneering advancements in gene therapy,
           transforming groundbreaking research into life-changing treatments for
           rare and life-threatening diseases.
         </p>

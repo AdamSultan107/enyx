@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 const newsData = [
   {
     date: "MARCH 4, 2025",
-    title: "Enyx Completes Phase II Trials, Paving the Way for Phase III in 2025",
+    title: "ENYX Completes Phase II Trials, Paving the Way for Phase III in 2025",
   },
   {
     date: "MARCH 3, 2025",
@@ -12,7 +12,7 @@ const newsData = [
   },
   {
     date: "FEBRUARY 15, 2025",
-    title: "Enyx Announces Collaboration with Leading Research Institutes",
+    title: "ENYX Announces Collaboration with Leading Research Institutes",
   },
 ];
 
