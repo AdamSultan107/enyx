@@ -114,8 +114,6 @@ const AboutUs = () => {
         </p>
       </motion.div>
 
-
-
       {/* Pipeline */}
       <motion.h2
         variants={fadeInUp}
