@@ -56,46 +56,65 @@ const AboutUs = () => {
         whileInView="visible"
         viewport={{ once: true }}
         transition={{ delay: 0.2, duration: 0.8 }}
-        className="text-2xl text-gray-600 text-center max-w-4xl mb-20"
+        className="text-3xl text-gray-600 text-center max-w-4xl mb-20"
       >
         At ENYX, we are dedicated to advancing gene therapy, turning cutting-edge research into transformative treatments for rare and life-threatening diseases.
       </motion.p>
 
       {/* Mission & Vision */}
-      <motion.div
+      <motion.h2
         variants={fadeInUp}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
         transition={{ delay: 0.4, duration: 0.8 }}
-        className="flex flex-col md:flex-row items-center mb-16 max-w-5xl"
+        className="text-4xl font-semibold text-blue-600 text-center mb-6"
       >
-        <FaDna className="text-7xl text-blue-600 mb-4 md:mb-0 md:mr-8" />
-        <div>
-          <h2 className="text-4xl font-semibold text-blue-600 mb-3">Our Mission & Vision</h2>
-          <p className="text-xl text-gray-600">
-            Our mission is to develop and deliver innovative gene therapies that address unmet medical needs, providing hope and healing to patients and their families.
-          </p>
-        </div>
+        Our Mission & Vision
+      </motion.h2>
+
+      <motion.div
+        variants={fadeInUp}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        transition={{ delay: 0.5, duration: 0.8 }}
+        className="flex flex-col md:flex-row items-start md:items-start mb-16 max-w-5xl"
+      >
+        <FaDna className="text-7xl text-blue-600 mb-4 md:mb-0 md:mr-6 flex-shrink-0" />
+        <p className="text-2xl text-gray-600 text-left">
+          Our mission is to develop and deliver innovative gene therapies that address unmet medical needs, providing hope and healing to patients and their families.
+        </p>
       </motion.div>
 
+
       {/* Science */}
+      <motion.h2
+        variants={fadeInUp}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        transition={{ delay: 0.6, duration: 0.8 }}
+        className="text-4xl font-semibold text-blue-600 text-center mb-6"
+      >
+        Our Science
+      </motion.h2>
+
       <motion.div
         variants={fadeInUp}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
-        transition={{ delay: 0.4, duration: 0.8 }}
-        className="flex flex-col md:flex-row items-center mb-20 max-w-5xl"
+        transition={{ delay: 0.7, duration: 0.8 }}
+        className="flex flex-col md:flex-row items-start md:items-start mb-20 max-w-5xl"
       >
-        <FaMicroscope className="text-9xl text-blue-600 mb-4 md:mb-0 md:mr-8" />
-        <div>
-          <h2 className="text-4xl font-semibold text-blue-600 mb-3">Our Science</h2>
-          <p className="text-xl text-gray-600">
-            At ENYX Therapeutics, we develop gene therapies for rare diseases, using viral vectors, CRISPR, and cell-based treatments to correct genetic mutations. Our work spans neuromuscular, hematologic, metabolic, and vision disorders, advancing from research to clinical trials to transform lives.
-          </p>
-        </div>
+        <FaMicroscope className="text-7xl text-blue-600 mb-4 md:mb-0 md:mr-6 flex-shrink-0" />
+        <p className="text-2xl text-gray-600 text-left">
+          At ENYX Therapeutics, we develop gene therapies for rare diseases, using viral vectors, CRISPR, and cell-based treatments to correct genetic mutations. Our work spans neuromuscular, hematologic, metabolic, and vision disorders, advancing from research to clinical trials to transform lives.
+        </p>
       </motion.div>
+
+
 
       {/* Pipeline */}
       <motion.h2
@@ -117,19 +136,20 @@ const AboutUs = () => {
         transition={{ delay: 1, duration: 0.8 }}
         className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mb-20"
       >
-        <div className="bg-gray-50 p-8 rounded-2xl shadow-lg">
+        <div className="bg-gray-50 p-8 rounded-2xl shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-xl">
           <h3 className="text-2xl font-semibold mb-3">Neuromuscular</h3>
           <p className="text-lg text-gray-600">Developing therapies targeting severe neuromuscular disorders.</p>
         </div>
-        <div className="bg-gray-50 p-8 rounded-2xl shadow-lg">
+        <div className="bg-gray-50 p-8 rounded-2xl shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-xl">
           <h3 className="text-2xl font-semibold mb-3">Hematologic</h3>
           <p className="text-lg text-gray-600">Advancing gene therapies for blood-related genetic conditions.</p>
         </div>
-        <div className="bg-gray-50 p-8 rounded-2xl shadow-lg">
+        <div className="bg-gray-50 p-8 rounded-2xl shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-xl">
           <h3 className="text-2xl font-semibold mb-3">Vision Disorders</h3>
           <p className="text-lg text-gray-600">Restoring sight and improving vision outcomes through gene editing.</p>
         </div>
       </motion.div>
+
 
       {/* Meet Our Team */}
       <motion.h2
