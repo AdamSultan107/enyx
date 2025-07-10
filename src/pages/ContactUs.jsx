@@ -31,7 +31,7 @@ const ContactUs = () => {
             className="h-1 bg-blue-600 rounded-full mx-auto mb-8"
           ></motion.div>
         <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-          At Enyx Therapeutics, we value open communication and collaboration. Whether you have questions, feedback, or are interested in partnerships, we would love to hear from you.
+          If you have questions, feedback, or are interested in partnerships, we are ready to engage and collaborate. We encourage you to reach out!
         </p>
       </motion.div>
 
@@ -75,7 +75,7 @@ const ContactUs = () => {
           <h2 className="text-3xl font-bold underline decoration-blue-500 mb-2">Location</h2>
           <iframe
             title="Google Maps"
-            className="w-full h-[500px] border rounded-lg"
+            className="w-[700px] h-[600px] border rounded-lg"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3021.9624456342147!2d-73.99352692359402!3d40.74847767143706!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259ae12a2e38f%3A0xd0c3a6fdfd3b177!2s106%20W%2032nd%20St%2C%20New%20York%2C%20NY%2010001!5e0!3m2!1sen!2sus!4v1679607458891!5m2!1sen!2sus"
             allowFullScreen
             loading="lazy"

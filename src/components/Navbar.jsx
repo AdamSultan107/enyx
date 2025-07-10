@@ -10,8 +10,7 @@ import {
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import { Link } from "react-router-dom";
-import logo from "../assets/enyxlogo.png";
-
+import logo from "../assets/enyxbluelogo.png";
 
 const Links = [
   { name: "Home", path: "/" },
